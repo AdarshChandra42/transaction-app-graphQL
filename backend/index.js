@@ -79,6 +79,7 @@ app.use(
 	expressMiddleware(server, {
 		context: async ({ req, res }) => buildContext({ req, res }),
 	})
+	//IMP: server (ie, apollo server) is mounted as a regular Express middleware.
 );
 
 // npm run build will build your frontend app, and it will the optimized version of your app
