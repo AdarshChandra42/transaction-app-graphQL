@@ -32,7 +32,8 @@ const userResolver = {
 				});
 
 				await newUser.save();
-				await context.login(newUser);
+				await context.login(newUser); 
+				//comes from graphql-passport, basically adds user to the session and adds cookies to the response.
 				return newUser;
 			} catch (err) {
 				console.error("Error in signUp: ", err);
