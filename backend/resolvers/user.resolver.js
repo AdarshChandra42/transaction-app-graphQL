@@ -13,7 +13,7 @@ const userResolver = {
 				}
 				const existingUser = await User.findOne({ username });
 				if (existingUser) {
-					throw new Error("User already exists");
+					throw new Error("User already exists"); //I think it should be "username already exists"
 				}
 
 				const salt = await bcrypt.genSalt(10);
