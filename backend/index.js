@@ -69,6 +69,10 @@ await server.start();
 // and our expressMiddleware function.
 app.use(
 	"/graphql",
+	//your GraphQL "server" runs on this "route", now you're applying cors middleware here, 
+	//understand that middlewares are appled in the sequence that they're written
+	//so appying cors here allows incoming requests ONLY from localhost3000 where our frontend browser client is situated
+	//also note: cors only blocks browser requests, not api requests.
 	cors({
 		origin: "http://localhost:3000",
 		credentials: true,
