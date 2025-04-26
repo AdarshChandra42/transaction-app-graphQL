@@ -78,6 +78,7 @@ app.use(
 	cors({
 		origin: "http://localhost:3000",
 		credentials: true,
+	//origin is basically which DOMAINS are allowed to send requests on the "/graphql" route, not IP addresses
 	}),
 	express.json(),
 	// expressMiddleware accepts the same arguments:
