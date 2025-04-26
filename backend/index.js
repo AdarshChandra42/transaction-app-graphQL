@@ -84,6 +84,7 @@ app.use(
 		context: async ({ req, res }) => buildContext({ req, res }),
 	})
 	//IMP: server (ie, apollo server) is mounted as a regular Express middleware.
+	//Apollo Server handles any requests through this route as GraphQL operations.
 );
 
 // npm run build will build your frontend app, and it will the optimized version of your app
