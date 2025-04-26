@@ -61,6 +61,8 @@ const server = new ApolloServer({
 	resolvers: mergedResolvers,
 	plugins: [ApolloServerPluginDrainHttpServer({ httpServer })],
 });
+//The frontend sends the GraphQL queries.
+//Apollo Server receives and processes them (according to your typeDefs and resolvers).
 
 // Ensure we wait for our server to start
 await server.start();
